@@ -7,7 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_scrolling.*
 
+
 class ScrollingActivity : AppCompatActivity() {
+//todo android  rooms db for handling the contacts
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
