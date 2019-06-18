@@ -8,8 +8,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Contacts")
 
-data class Contacts (@PrimaryKey(autoGenerate = true) var id : Long?,
-                     @ColumnInfo(name = "name") var name: String,
+data class Contacts (@ColumnInfo(name = "name") @PrimaryKey(autoGenerate = false) var name: String,
                      @ColumnInfo(name = "phoneNumber") var phoneNumber: Int,
                      @ColumnInfo(name = "street") var street: String,
                      @ColumnInfo(name = "city") var city: String,
