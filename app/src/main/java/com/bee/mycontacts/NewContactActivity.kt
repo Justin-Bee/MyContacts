@@ -32,11 +32,13 @@ import androidx.appcompat.app.AppCompatActivity
 class NewContactActivity : AppCompatActivity() {
 
     private lateinit var editWordView: EditText
+    private lateinit var editPhoneView: EditText
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_word)
         editWordView = findViewById(R.id.edit_word)
+        editPhoneView = findViewById(R.id.edit_phone)
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -44,8 +46,8 @@ class NewContactActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(editWordView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
-                val word = editWordView.text.toString()
-                replyIntent.putExtra(EXTRA_REPLY, word)
+                val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString())
+                replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
             finish()

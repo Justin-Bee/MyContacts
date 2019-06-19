@@ -50,6 +50,7 @@ class ContactListAdapter internal constructor(
         notifyDataSetChanged()
     }
 
+
     override fun getItemCount() = names.size
 }
 

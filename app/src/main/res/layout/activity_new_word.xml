@@ -29,9 +29,22 @@ limitations under the License. -->
         android:layout_marginBottom="@dimen/big_padding"
         android:layout_marginTop="@dimen/big_padding"
         android:textSize="18sp" />
+    <EditText
+            android:id="@+id/edit_phone"
+            android:layout_below="@id/edit_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="Phone Number"
+            android:inputType="textAutoComplete"
+            android:padding="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:layout_marginTop="@dimen/big_padding"
+            android:textSize="18sp" />
 
     <Button
         android:id="@+id/button_save"
+        android:layout_below="@id/edit_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"

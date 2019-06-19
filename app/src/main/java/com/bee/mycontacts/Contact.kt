@@ -32,4 +32,6 @@ import androidx.room.PrimaryKey
  */
 
 @Entity(tableName = "contact_table")
-data class Contact(@PrimaryKey @ColumnInfo(name = "name") val name: String)
+data class Contact(@PrimaryKey @ColumnInfo(name = "name") val name: String,
+                   @ColumnInfo(name = "phone") val phone: String)
+

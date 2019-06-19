@@ -29,10 +29,10 @@ import kotlinx.coroutines.launch
  * This is the backend. The database. This used to be done by the OpenHelper.
  * The fact that this has very few comments emphasizes its coolness.
  */
-@Database(entities = [Contact::class], version = 1)
+@Database(entities = [Contact::class], version = 2)
 abstract class ContactRoomDatabase : RoomDatabase() {
 
-    abstract fun ContactDao(): ContactDao
+    abstract fun contactDao(): ContactDao
 
     companion object {
         @Volatile
@@ -74,7 +74,7 @@ abstract class ContactRoomDatabase : RoomDatabase() {
                 // comment out the following line.
                 INSTANCE?.let { database ->
                     scope.launch {
-                        populateDatabase(database.ContactDao())
+                        populateDatabase(database.contactDao())
                     }
                 }
             }

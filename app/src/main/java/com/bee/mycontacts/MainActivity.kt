@@ -68,8 +68,11 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
-                val name = Contact(data.getStringExtra(NewContactActivity.EXTRA_REPLY))
-                contactViewModel.insert(name)
+                val temp=arrayOf(data.getStringExtra(NewContactActivity.EXTRA_REPLY))
+
+                val contact = Contact(name=temp[0], phone=temp[1])
+                contactViewModel.insert(contact)
+
             }
         } else {
             Toast.makeText(

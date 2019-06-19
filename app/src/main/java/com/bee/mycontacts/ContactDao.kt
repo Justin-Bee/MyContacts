@@ -42,7 +42,7 @@ interface ContactDao {
     fun getAlphabetizedWords(): LiveData<List<Contact>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(name: Contact)
+    suspend fun insert(contact: Contact)
 
     @Query("DELETE FROM contact_table")
     suspend fun deleteAll()

@@ -38,7 +38,7 @@ class ContactViewModel(application: Application) : AndroidViewModel(application)
     val allWords: LiveData<List<Contact>>
 
     init {
-        val wordsDao = ContactRoomDatabase.getDatabase(application, viewModelScope).ContactDao()
+        val wordsDao = ContactRoomDatabase.getDatabase(application, viewModelScope).contactDao()
         repository = ContactRepository(wordsDao)
         allWords = repository.allWords
     }
@@ -46,7 +46,7 @@ class ContactViewModel(application: Application) : AndroidViewModel(application)
     /**
      * Launching a new coroutine to insert the data in a non-blocking way
      */
-    fun insert(name: Contact) = viewModelScope.launch {
-        repository.insert(name)
+    fun insert(contact: Contact) = viewModelScope.launch {
+        repository.insert(contact)
     }
 }

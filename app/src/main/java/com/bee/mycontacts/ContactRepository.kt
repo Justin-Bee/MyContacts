@@ -32,7 +32,7 @@ class ContactRepository(private val contactDao: ContactDao) {
     // coroutine or another suspend function.
     // This ensures that you're not doing any long running operations on the main
     // thread, blocking the UI.
-    suspend fun insert(name: Contact) {
-        contactDao.insert(name)
+    suspend fun insert(contact: Contact) {
+        contactDao.insert(contact)
     }
 }
