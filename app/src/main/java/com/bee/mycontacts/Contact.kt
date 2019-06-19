@@ -31,5 +31,5 @@ import androidx.room.PrimaryKey
  * https://developer.android.com/topic/libraries/architecture/room.html
  */
 
-@Entity(tableName = "word_table")
-data class Word(@PrimaryKey @ColumnInfo(name = "word") val word: String)
+@Entity(tableName = "contact_table")
+data class Contact(@PrimaryKey @ColumnInfo(name = "name") val name: String)

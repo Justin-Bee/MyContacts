@@ -17,40 +17,40 @@ package com.bee.mycontacts
  */
 
 import android.content.Context
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 
 
-class WordListAdapter internal constructor(
+class ContactListAdapter internal constructor(
         context: Context
-) : RecyclerView.Adapter<WordListAdapter.WordViewHolder>() {
+) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var words = emptyList<Word>() // Cached copy of words
+    private var names = emptyList<Contact>() // Cached copy of words
 
-    inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val wordItemView: TextView = itemView.findViewById(R.id.textView)
+    inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val contactItemView: TextView = itemView.findViewById(R.id.textView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val itemView = inflater.inflate(R.layout.recyclerview_item, parent, false)
-        return WordViewHolder(itemView)
+        return ContactViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        val current = words[position]
-        holder.wordItemView.text = current.word
+    override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
+        val current = names[position]
+        holder.contactItemView.text = current.name
     }
 
-    internal fun setWords(words: List<Word>) {
-        this.words = words
+    internal fun setNames(names: List<Contact>) {
+        this.names = names
         notifyDataSetChanged()
     }
 
-    override fun getItemCount() = words.size
+    override fun getItemCount() = names.size
 }
 
 
