@@ -17,10 +17,7 @@ package com.bee.mycontacts
  */
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 /**
  * The Room Magic is in this file, where you map a Java method call to an SQL query.
@@ -38,7 +35,8 @@ interface ContactDao {
     // Always holds/caches latest version of data. Notifies its active observers when the
     // data has changed. Since we are getting all the contents of the database,
     // we are notified whenever any of the database contents have changed.
-    @Query("SELECT * from contact_table ORDER BY name ASC")
+    @Query("SELECT name from contact_table ORDER BY name ASC")
+    @Ignore()
     fun getAlphabetizedWords(): LiveData<List<Contact>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

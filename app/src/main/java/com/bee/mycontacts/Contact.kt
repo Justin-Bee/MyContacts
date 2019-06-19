@@ -16,8 +16,10 @@ package com.bee.mycontacts
  * limitations under the License.
  */
 
+import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 /**
@@ -32,6 +34,11 @@ import androidx.room.PrimaryKey
  */
 
 @Entity(tableName = "contact_table")
-data class Contact(@PrimaryKey @ColumnInfo(name = "name") val name: String,
-                   @ColumnInfo(name = "phone") val phone: String)
+data class Contact(@PrimaryKey @NonNull var name: String,
+                   @Ignore
+                   var phone: String?){
+    constructor(): this("name","phone")
+}
+
+
 
