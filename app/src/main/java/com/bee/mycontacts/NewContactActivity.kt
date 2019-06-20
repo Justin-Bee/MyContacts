@@ -47,6 +47,7 @@ class NewContactActivity : AppCompatActivity() {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString())
+               // val contact = editWordView.text.toString()
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
@@ -55,7 +56,7 @@ class NewContactActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+        const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
     }
 }
 

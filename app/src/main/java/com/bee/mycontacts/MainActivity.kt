@@ -68,9 +68,9 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
-                val temp=arrayOf(data.getStringExtra(NewContactActivity.EXTRA_REPLY))
+                val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
 
-                val contact = Contact(name=temp[0], phone=temp[1])
+                val contact = Contact(temp[0], temp[1])
                 contactViewModel.insert(contact)
 
             }

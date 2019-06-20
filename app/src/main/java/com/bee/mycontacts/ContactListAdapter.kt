@@ -29,7 +29,9 @@ class ContactListAdapter internal constructor(
 ) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var names = emptyList<Contact>() // Cached copy of words
+    private var contacts = emptyList<Contact>() // Cached copy of words
+    private var names = emptyList<String>()
+
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val contactItemView: TextView = itemView.findViewById(R.id.textView)
@@ -41,17 +43,17 @@ class ContactListAdapter internal constructor(
     }
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
-        val current = names[position]
+        val current = contacts[position]
         holder.contactItemView.text = current.name
     }
 
     internal fun setNames(names: List<Contact>) {
-        this.names = names
+        this.contacts = names
         notifyDataSetChanged()
     }
 
 
-    override fun getItemCount() = names.size
+    override fun getItemCount() = contacts.size
 }
 
 

@@ -38,8 +38,8 @@ class ContactViewModel(application: Application) : AndroidViewModel(application)
     val allWords: LiveData<List<Contact>>
 
     init {
-        val wordsDao = ContactRoomDatabase.getDatabase(application, viewModelScope).contactDao()
-        repository = ContactRepository(wordsDao)
+        val contactDao = ContactRoomDatabase.getDatabase(application, viewModelScope).contactDao()
+        repository = ContactRepository(contactDao)
         allWords = repository.allWords
     }
 

@@ -35,8 +35,7 @@ interface ContactDao {
     // Always holds/caches latest version of data. Notifies its active observers when the
     // data has changed. Since we are getting all the contents of the database,
     // we are notified whenever any of the database contents have changed.
-    @Query("SELECT name from contact_table ORDER BY name ASC")
-    @Ignore()
+    @Query("SELECT * from contact_table ORDER BY name ASC")
     fun getAlphabetizedWords(): LiveData<List<Contact>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
