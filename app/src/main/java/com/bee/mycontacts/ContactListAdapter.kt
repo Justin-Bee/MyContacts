@@ -20,6 +20,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -29,12 +30,20 @@ class ContactListAdapter internal constructor(
 ) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
+    private val contact_inflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
-    private var names = emptyList<String>()
+    var onItemClick: ((Contact) -> Unit )? = null
 
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val contactItemView: TextView = itemView.findViewById(R.id.textView)
+        val contactItemView: Button = itemView.findViewById(R.id.buttonView)
+        //added for button clicks
+        init{
+            contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
+        }
+      //  val contactNameView: TextView = itemView.findViewById(R.id.nameView)
+      //  val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
@@ -45,7 +54,13 @@ class ContactListAdapter internal constructor(
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val current = contacts[position]
         holder.contactItemView.text = current.name
+
+
+       // holder.contactNameView.text = current.name
+      //  holder.contactPhoneView.text = current.phone
     }
+
+    inner class ViewHolder
 
     internal fun setNames(names: List<Contact>) {
         this.contacts = names

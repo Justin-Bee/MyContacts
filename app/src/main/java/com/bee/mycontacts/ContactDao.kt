@@ -38,6 +38,9 @@ interface ContactDao {
     @Query("SELECT * from contact_table ORDER BY name ASC")
     fun getAlphabetizedWords(): LiveData<List<Contact>>
 
+    @Query("SELECT * from contact_table where name like :name")
+    fun getContactInfo(name: String): LiveData<List<Contact>>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(contact: Contact)
 

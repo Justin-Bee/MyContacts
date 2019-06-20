@@ -28,14 +28,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class MainActivity : AppCompatActivity() {
+class ContactInfoActivity : AppCompatActivity() {
 
-    private val newWordActivityRequestCode = 1
+
     private lateinit var contactViewModel: ContactViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) //TODO make a new layout later
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -44,10 +44,6 @@ class MainActivity : AppCompatActivity() {
         val adapter = ContactListAdapter(this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-        //added for button clicks
-        adapter.onItemClick = { contact ->
-            Toast.makeText(this@MainActivity, "Test", Toast.LENGTH_SHORT).show()
-        }
 
         // Get a new or existing ViewModel from the ViewModelProvider.
         contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
@@ -59,31 +55,7 @@ class MainActivity : AppCompatActivity() {
             // Update the cached copy of the words in the adapter.
             words?.let { adapter.setNames(it) }
         })
-
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener {
-            val intent = Intent(this@MainActivity, NewContactActivity::class.java)
-            startActivityForResult(intent, newWordActivityRequestCode)
-        }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
-        super.onActivityResult(requestCode, resultCode, intentData)
 
-        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-            intentData?.let { data ->
-                val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
-
-                val contact = Contact(temp[0], temp[1])
-                contactViewModel.insert(contact)
-
-            }
-        } else {
-            Toast.makeText(
-                    applicationContext,
-                    R.string.empty_not_saved,
-                    Toast.LENGTH_LONG
-            ).show()
-        }
-    }
 }
