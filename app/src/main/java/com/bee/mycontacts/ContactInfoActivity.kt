@@ -31,7 +31,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class ContactInfoActivity : AppCompatActivity() {
 
 
-    private lateinit var contactViewModel: ContactViewModel
+    private lateinit var contactViewModel: ContactInfoModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +48,7 @@ class ContactInfoActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Get a new or existing ViewModel from the ViewModelProvider.
-        contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
+        contactViewModel = ViewModelProviders.of(this).get(ContactInfoModel::class.java)
 
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
