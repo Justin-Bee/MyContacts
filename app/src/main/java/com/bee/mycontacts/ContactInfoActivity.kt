@@ -35,20 +35,20 @@ class ContactInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.recyclerview_contact_info)
-      //  setContentView(R.layout.activity_main) //TODO make a new layout later
+       // setContentView(R.layout.recyclerview_contact_info)
+        setContentView(R.layout.activity_contactinfo) //TODO make a new layout later
 
         //val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
-      //  val toolbar = findViewById<Toolbar>(R.id.toolbar)
-      //  setSupportActionBar(toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-     //   val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-     //   val adapter = ContactInfoAdapter(this)
-      //  recyclerView.adapter = adapter
-     //   recyclerView.layoutManager = LinearLayoutManager(this)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
+        val adapter = ContactInfoAdapter(this)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Get a new or existing ViewModel from the ViewModelProvider.
-     //   contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
+        contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
 
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
