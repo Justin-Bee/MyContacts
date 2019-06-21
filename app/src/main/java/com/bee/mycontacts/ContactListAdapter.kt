@@ -30,7 +30,7 @@ class ContactListAdapter internal constructor(
 ) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private val contact_inflater: LayoutInflater = LayoutInflater.from(context)
+  //  private val contact_inflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
     var onItemClick: ((Contact) -> Unit )? = null
 

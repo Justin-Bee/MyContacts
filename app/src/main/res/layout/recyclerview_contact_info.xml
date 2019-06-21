@@ -3,7 +3,7 @@
               android:orientation="vertical" android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
-    <TextView
+  <!--  <TextView
          android:id="@+id/nameView"
          style="@style/word_title"
          android:layout_width="match_parent"
@@ -14,10 +14,10 @@
             style="@style/word_title"
               android:layout_below="@+id/nameView"
             android:id="@+id/phoneView"
-            android:background="@android:color/holo_orange_light"/>
+            android:background="@android:color/holo_orange_light"/> -->
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-    android:layout_below="@+id/nameView"
+
     android:text="Test"
     android:id="@+id/test"/>
 </LinearLayout>
