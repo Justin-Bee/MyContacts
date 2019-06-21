@@ -24,7 +24,7 @@ So, we are leaving the template code in. -->
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.bee.mycontacts.MainActivity">
+        tools:context="com.bee.mycontacts.ContactInfoActivity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -42,12 +42,6 @@ So, we are leaving the template code in. -->
 
     <include layout="@layout/content_contactinfo"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_add_black_24dp"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
