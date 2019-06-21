@@ -29,7 +29,7 @@ class ContactInfoAdapter internal constructor(
     context: Context
 ) : RecyclerView.Adapter<ContactInfoAdapter.ContactViewHolder>() {
 
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
+    //private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val contact_inflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
   //  var onItemClick: ((Contact) -> Unit )? = null
@@ -47,7 +47,7 @@ class ContactInfoAdapter internal constructor(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
-        val itemView = inflater.inflate(R.layout.recyclerview_contact_info, parent, false)
+        val itemView = contact_inflater.inflate(R.layout.recyclerview_contact_info, parent, false)
         return ContactViewHolder(itemView)
     }
 

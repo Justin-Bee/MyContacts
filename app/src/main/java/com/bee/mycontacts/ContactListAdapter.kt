@@ -60,7 +60,7 @@ class ContactListAdapter internal constructor(
       //  holder.contactPhoneView.text = current.phone
     }
 
-    inner class ViewHolder
+
 
     internal fun setNames(names: List<Contact>) {
         this.contacts = names
