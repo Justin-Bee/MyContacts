@@ -53,8 +53,8 @@ class ContactInfoAdapter internal constructor(
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val current = contacts[position]
-        holder.contactPhoneView.text = current.phone
-        holder.contactNameView.text = current.name
+      //  holder.contactPhoneView.text = current.phone
+       // holder.contactNameView.text = current.name
 
     }
 
@@ -62,6 +62,11 @@ class ContactInfoAdapter internal constructor(
     internal fun setNames(names: List<Contact>) {
         this.contacts = names
         notifyDataSetChanged()
+    }
+
+    internal fun setContactInfo(name: String){
+        //todo
+
     }
 
 
