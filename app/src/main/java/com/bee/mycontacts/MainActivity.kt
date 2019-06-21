@@ -45,8 +45,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         //added for button clicks
-        adapter.onItemClick = { contact ->
-            Toast.makeText(this@MainActivity, "Test", Toast.LENGTH_SHORT).show()
+        adapter.onItemClick = { contacts ->
+            //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MainActivity, ContactInfoActivity::class.java)
+           // intent.putExtra(NAME_REPLY, contacts.name )
+
+            startActivity(intent)
         }
 
         // Get a new or existing ViewModel from the ViewModelProvider.
@@ -85,5 +89,9 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
             ).show()
         }
+    }
+
+    companion object {
+        const val NAME_REPLY = "com.bee.mycontact.REPLY"
     }
 }

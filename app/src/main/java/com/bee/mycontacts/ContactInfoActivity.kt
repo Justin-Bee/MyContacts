@@ -37,11 +37,12 @@ class ContactInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) //TODO make a new layout later
 
+        //val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-        val adapter = ContactListAdapter(this)
+        val adapter = ContactInfoAdapter(this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
