@@ -22,7 +22,7 @@
         <activity android:name=".NewContactActivity"></activity>
         <activity android:name=".ContactInfoActivity"
                   android:label="Test Contact"
-                  android:theme="@style/AppTheme.NoActionBar"></activity>
+                  ></activity>
     </application>
 
 </manifest>

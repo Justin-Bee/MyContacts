@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         //added for button clicks
         adapter.onItemClick = { contacts ->
             //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@MainActivity, ContactInfoActivity::class.java)
+            val intent = Intent(this, ContactInfoActivity::class.java)
 
             intent.putExtra(NAME_REPLY, contacts.name )
 
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            val intent = Intent(this@MainActivity, NewContactActivity::class.java)
+            val intent = Intent(this, NewContactActivity::class.java)
             startActivityForResult(intent, newWordActivityRequestCode)
         }
     }

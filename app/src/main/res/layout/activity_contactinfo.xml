@@ -24,7 +24,7 @@ So, we are leaving the template code in. -->
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.bee.mycontacts.ContactInfoActivity">
+        tools:context="com.bee.mycontacts.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
