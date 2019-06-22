@@ -15,18 +15,12 @@ package com.bee.mycontacts
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import android.app.Activity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ContactInfoActivity : AppCompatActivity() {
 
@@ -36,11 +30,11 @@ class ContactInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // setContentView(R.layout.recyclerview_contact_info)
-        setContentView(R.layout.activity_contactinfo) //TODO make a new layout later
+        setContentView(R.layout.activity_contactinfo)
 
         val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
-       // val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
-      //  setSupportActionBar(toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
+        setSupportActionBar(toolbar)
 
         val recyclerView = findViewById<RecyclerView>(R.id.contactrecyclerview)
         val adapter = ContactInfoAdapter(this)

@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         adapter.onItemClick = { contacts ->
             //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
             val intent = Intent(this@MainActivity, ContactInfoActivity::class.java)
+
             intent.putExtra(NAME_REPLY, contacts.name )
 
             startActivity(intent)
