@@ -41,8 +41,8 @@ class ContactInfoAdapter internal constructor(
      //   init{
      //       contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
     //    }
-          val contactNameView: TextView = itemView.findViewById(R.id.nameView)
-          val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
+        //  val contactNameView: TextView = itemView.findViewById(R.id.nameView)
+       //   val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
 
     }
 
