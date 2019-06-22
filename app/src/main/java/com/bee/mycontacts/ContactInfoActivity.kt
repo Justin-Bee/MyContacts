@@ -38,7 +38,7 @@ class ContactInfoActivity : AppCompatActivity() {
        // setContentView(R.layout.recyclerview_contact_info)
         setContentView(R.layout.activity_contactinfo) //TODO make a new layout later
 
-        //val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
+        val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
        // val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
       //  setSupportActionBar(toolbar)
 
@@ -55,7 +55,7 @@ class ContactInfoActivity : AppCompatActivity() {
         // in the foreground.
         contactViewModel.allWords.observe(this, Observer { words ->
             // Update the cached copy of the words in the adapter.
-         // words?.let { adapter.setContactInfo(temp) }
+          words?.let { adapter.setContactInfo(temp) }
         })
     }
 
