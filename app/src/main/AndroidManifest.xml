@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewContactActivity"></activity>
-        <activity android:name=".ContactInfoActivity"></activity>
+        <activity android:name=".ContactInfoActivity"
+                  android:label="Test Contact"
+                  android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

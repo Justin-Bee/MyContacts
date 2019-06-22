@@ -33,8 +33,8 @@ class ContactInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_contactinfo)
 
         val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
-        val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
-        setSupportActionBar(toolbar)
+        //val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
+       // setSupportActionBar(toolbar)
 
         val recyclerView = findViewById<RecyclerView>(R.id.contactrecyclerview)
         val adapter = ContactInfoAdapter(this)

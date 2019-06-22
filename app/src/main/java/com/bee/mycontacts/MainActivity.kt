@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(NAME_REPLY, contacts.name )
 
             startActivity(intent)
+
         }
 
         // Get a new or existing ViewModel from the ViewModelProvider.
