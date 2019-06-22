@@ -53,10 +53,10 @@ class ContactInfoActivity : AppCompatActivity() {
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
         // in the foreground.
-        contactViewModel.allWords.observe(this, Observer { words ->
+     //   contactViewModel.allWords.observe(this, Observer { words ->
             // Update the cached copy of the words in the adapter.
-          words?.let { adapter.setContactInfo(temp) }
-        })
+     ///     words?.let { adapter.setContactInfo(temp) }
+     //   })
     }
 
 

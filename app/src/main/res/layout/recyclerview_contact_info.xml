@@ -16,8 +16,8 @@
             android:id="@+id/phoneView"
             android:background="@android:color/holo_orange_light"/>
     <TextView android:layout_width="match_parent"
+              android:layout_below="@+id/phoneView"
               android:layout_height="wrap_content"
-
-    android:text="Test"
-    android:id="@+id/test"/>
+              android:text="Test"
+              android:id="@+id/test"/>
 </LinearLayout>
