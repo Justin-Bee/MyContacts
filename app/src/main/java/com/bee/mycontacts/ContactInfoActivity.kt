@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -34,11 +35,11 @@ class ContactInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_contactinfo)
 
         val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
-        Toast.makeText(
-            applicationContext,
-            temp,
-            Toast.LENGTH_LONG
-        ).show()
+        //Toast.makeText(
+        //   applicationContext,
+        //    temp,
+        //    Toast.LENGTH_LONG
+       // ).show()
         //val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
        // setSupportActionBar(toolbar)
 
@@ -53,10 +54,12 @@ class ContactInfoActivity : AppCompatActivity() {
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
         // in the foreground.
-     //   contactViewModel.allWords.observe(this, Observer { words ->
+        contactViewModel.allWords.observe(this, Observer { words ->
             // Update the cached copy of the words in the adapter.
-     ///     words?.let { adapter.setContactInfo(temp) }
-     //   })
+           words?.let {
+               adapter.setNames(it)
+               adapter.setContactInfo(temp) }
+        })
     }
 
     companion object {

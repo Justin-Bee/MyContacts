@@ -32,6 +32,7 @@ class ContactInfoAdapter internal constructor(
     //private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val contactinflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
+    private var contactFound = Contact("name", "phone")
   //  var onItemClick: ((Contact) -> Unit )? = null
 
 
@@ -52,9 +53,9 @@ class ContactInfoAdapter internal constructor(
     }
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
-        val current = contacts[position]
-        holder.contactPhoneView.text = current.phone
-        holder.contactNameView.text = current.name
+        //val current = contacts[position]
+        holder.contactPhoneView.text = contactFound.phone
+        holder.contactNameView.text = contactFound.name
 
     }
 
@@ -67,7 +68,12 @@ class ContactInfoAdapter internal constructor(
     internal fun setContactInfo(name: String){
         //todo
 
-    }
+        for(i in contacts ){
+            if(i.name.equals(name)){
+                contactFound = i
+            }
+        }
+            }
 
 
     override fun getItemCount() = contacts.size
