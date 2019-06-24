@@ -42,12 +42,16 @@ class ContactInfoAdapter internal constructor(
      //   init{
      //       contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
     //    }
-          val contactNameView: TextView = itemView.findViewById(R.id.nameView)
-          val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
-          val contactAddressView: TextView = itemView.findViewById(R.id.addressView)
-          val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
-          val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
-          val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
+          val contactNameView: Button = itemView.findViewById(R.id.nameView)
+          val contactPhoneView: Button = itemView.findViewById(R.id.phoneView)
+          val contactAddressView: Button = itemView.findViewById(R.id.addressView)
+          val contactEmailView: Button = itemView.findViewById(R.id.emailView)
+          val contactFacebookView: Button = itemView.findViewById(R.id.facebookView)
+          val contactTwitterView: Button = itemView.findViewById(R.id.twitterView)
+
+        init {
+            contactPhoneView.setOnClickListener {  }
+        }
 
     }
 
