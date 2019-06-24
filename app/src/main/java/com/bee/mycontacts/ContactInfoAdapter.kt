@@ -41,8 +41,8 @@ class ContactInfoAdapter internal constructor(
      //   init{
      //       contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
     //    }
-      //    val contactNameView: TextView = itemView.findViewById(R.id.nameView)
-       //   val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
+          val contactNameView: TextView = itemView.findViewById(R.id.nameView)
+          val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
 
     }
 
@@ -53,8 +53,8 @@ class ContactInfoAdapter internal constructor(
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val current = contacts[position]
-      //  holder.contactPhoneView.text = current.phone
-       // holder.contactNameView.text = current.name
+        holder.contactPhoneView.text = current.phone
+        holder.contactNameView.text = current.name
 
     }
 

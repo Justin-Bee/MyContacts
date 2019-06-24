@@ -17,6 +17,7 @@ package com.bee.mycontacts
  */
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,13 +34,18 @@ class ContactInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_contactinfo)
 
         val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
+        Toast.makeText(
+            applicationContext,
+            temp,
+            Toast.LENGTH_LONG
+        ).show()
         //val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
        // setSupportActionBar(toolbar)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.contactrecyclerview)
+        val recycleView = findViewById<RecyclerView>(R.id.contactrecyclerview)
         val adapter = ContactInfoAdapter(this)
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recycleView.adapter = adapter
+        recycleView.layoutManager = LinearLayoutManager(this)
 
         // Get a new or existing ViewModel from the ViewModelProvider.
         contactViewModel = ViewModelProviders.of(this).get(ContactInfoModel::class.java)
@@ -51,6 +57,10 @@ class ContactInfoActivity : AppCompatActivity() {
             // Update the cached copy of the words in the adapter.
      ///     words?.let { adapter.setContactInfo(temp) }
      //   })
+    }
+
+    companion object {
+        const val NAME_REPLY = "com.bee.mycontact.REPLY"
     }
 
 
