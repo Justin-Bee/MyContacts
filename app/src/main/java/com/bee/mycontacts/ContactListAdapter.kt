@@ -30,7 +30,6 @@ class ContactListAdapter internal constructor(
 ) : RecyclerView.Adapter<ContactListAdapter.ContactViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-  //  private val contact_inflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
     var onItemClick: ((Contact) -> Unit )? = null
 
@@ -38,12 +37,9 @@ class ContactListAdapter internal constructor(
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val contactItemView: Button = itemView.findViewById(R.id.buttonView)
         //added for button clicks
-        init{
-            contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
+        init {
+            contactItemView.setOnClickListener { onItemClick?.invoke(contacts[position]) }
         }
-      //  val contactNameView: TextView = itemView.findViewById(R.id.nameView)
-      //  val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
@@ -54,13 +50,7 @@ class ContactListAdapter internal constructor(
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val current = contacts[position]
         holder.contactItemView.text = current.name
-
-
-       // holder.contactNameView.text = current.name
-      //  holder.contactPhoneView.text = current.phone
     }
-
-
 
     internal fun setNames(names: List<Contact>) {
         this.contacts = names

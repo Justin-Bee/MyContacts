@@ -53,7 +53,7 @@ class ContactInfoAdapter internal constructor(
     }
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
-        //val current = contacts[position]
+
         holder.contactPhoneView.text = contactFound.phone
         holder.contactNameView.text = contactFound.name
 
@@ -65,11 +65,12 @@ class ContactInfoAdapter internal constructor(
         notifyDataSetChanged()
     }
 
+    //finds the contact matching the name passed to it
     internal fun setContactInfo(name: String){
-        //todo
-
         for(i in contacts ){
             if(i.name.equals(name)){
+                var temp= listOf(i)
+                contacts = temp
                 contactFound = i
             }
         }

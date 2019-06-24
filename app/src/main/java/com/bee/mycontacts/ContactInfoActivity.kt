@@ -31,15 +31,8 @@ class ContactInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       // setContentView(R.layout.recyclerview_contact_info)
         setContentView(R.layout.activity_contactinfo)
-
         val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
-        //Toast.makeText(
-        //   applicationContext,
-        //    temp,
-        //    Toast.LENGTH_LONG
-       // ).show()
         //val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
        // setSupportActionBar(toolbar)
 
