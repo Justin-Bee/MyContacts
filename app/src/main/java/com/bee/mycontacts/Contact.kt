@@ -35,7 +35,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "contact_table")
 data class Contact(@PrimaryKey @ColumnInfo var name: String,
-                   @Ignore var phone: String){
+                   @ColumnInfo var phone: String){
     constructor(): this("name","phone")
 }
 
