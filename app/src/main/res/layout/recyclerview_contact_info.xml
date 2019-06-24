@@ -7,42 +7,42 @@
             style="@style/word_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light" />
+            android:background="@android:color/darker_gray" />
     <TextView
         android:id="@+id/phoneView"
         style="@style/word_title"
         android:layout_below="@+id/nameView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light" />
+        android:background="@android:color/darker_gray" />
     <TextView
             android:id="@+id/addressView"
             style="@style/word_title"
             android:layout_below="@+id/phoneView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light" />
+            android:background="@android:color/darker_gray" />
     <TextView
             android:id="@+id/emailView"
             style="@style/word_title"
             android:layout_below="@+id/addressView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light" />
+            android:background="@android:color/darker_gray" />
     <TextView
             android:id="@+id/facebookView"
             style="@style/word_title"
             android:layout_below="@+id/emailView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light" />
+            android:background="@android:color/darker_gray" />
     <TextView
             android:id="@+id/twitterView"
             style="@style/word_title"
             android:layout_below="@+id/facebookView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light" />
+            android:background="@android:color/darker_gray" />
 
 
 
