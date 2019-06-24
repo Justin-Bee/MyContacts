@@ -17,11 +17,14 @@ package com.bee.mycontacts
  */
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -34,6 +37,7 @@ class ContactInfoAdapter internal constructor(
     private var contacts = emptyList<Contact>() // Cached copy of words
     private var contactFound = Contact("name", "phone","a", "e", "f", "t")
   //  var onItemClick: ((Contact) -> Unit )? = null
+    private val context: Context = context
 
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -42,15 +46,19 @@ class ContactInfoAdapter internal constructor(
      //   init{
      //       contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
     //    }
-          val contactNameView: Button = itemView.findViewById(R.id.nameView)
-          val contactPhoneView: Button = itemView.findViewById(R.id.phoneView)
-          val contactAddressView: Button = itemView.findViewById(R.id.addressView)
-          val contactEmailView: Button = itemView.findViewById(R.id.emailView)
-          val contactFacebookView: Button = itemView.findViewById(R.id.facebookView)
-          val contactTwitterView: Button = itemView.findViewById(R.id.twitterView)
+          val contactNameView: TextView = itemView.findViewById(R.id.nameView)
+          val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
+          val contactAddressView: TextView = itemView.findViewById(R.id.addressView)
+          val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
+          val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
+          val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
 
         init {
-            contactPhoneView.setOnClickListener {  }
+            contactPhoneView.setOnClickListener {
+                val Uri = Uri.parse("tel:"+ contactFound.phone)
+                val callIntent = Intent(Intent.ACTION_DIAL, Uri)
+                startActivity(context,callIntent, null)
+            }
         }
 
     }
