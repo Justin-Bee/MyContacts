@@ -39,6 +39,51 @@ limitations under the License. -->
             android:layout_marginBottom="@dimen/big_padding"
             android:layout_marginTop="@dimen/big_padding"
             android:textSize="18sp" />
+    <EditText
+            android:id="@+id/edit_address"
+            android:layout_below="@id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="Address"
+            android:padding="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:layout_marginTop="@dimen/big_padding"
+            android:textSize="18sp" />
+    <EditText
+            android:id="@+id/edit_email"
+            android:layout_below="@id/edit_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="Email"
+            android:padding="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:layout_marginTop="@dimen/big_padding"
+            android:textSize="18sp" />
+    <EditText
+            android:id="@+id/edit_facebook"
+            android:layout_below="@id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="Facebook"
+            android:padding="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:layout_marginTop="@dimen/big_padding"
+            android:textSize="18sp" />
+    <EditText
+            android:id="@+id/edit_twitter"
+            android:layout_below="@id/edit_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="Twitter"
+            android:padding="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/big_padding"
+            android:layout_marginTop="@dimen/big_padding"
+            android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/button_save"

@@ -35,8 +35,13 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "contact_table")
 data class Contact(@PrimaryKey @ColumnInfo var name: String,
-                   @ColumnInfo var phone: String){
-    constructor(): this("name","phone")
+                   @ColumnInfo var phone: String,
+                   @ColumnInfo var address: String,
+                   @ColumnInfo var email: String,
+                   @ColumnInfo var facebook: String,
+                   @ColumnInfo var twitter: String
+                   ){
+    constructor(): this("name","phone", "address", "email", "facebook", "twitter")
 }
 
 

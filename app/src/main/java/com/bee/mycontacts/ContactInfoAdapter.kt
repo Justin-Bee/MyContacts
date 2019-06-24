@@ -32,7 +32,7 @@ class ContactInfoAdapter internal constructor(
     //private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val contactinflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
-    private var contactFound = Contact("name", "phone")
+    private var contactFound = Contact("name", "phone","a", "e", "f", "t")
   //  var onItemClick: ((Contact) -> Unit )? = null
 
 
@@ -44,6 +44,10 @@ class ContactInfoAdapter internal constructor(
     //    }
           val contactNameView: TextView = itemView.findViewById(R.id.nameView)
           val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
+          val contactAddressView: TextView = itemView.findViewById(R.id.addressView)
+          val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
+          val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
+          val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
 
     }
 
@@ -53,9 +57,12 @@ class ContactInfoAdapter internal constructor(
     }
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
-
         holder.contactPhoneView.text = contactFound.phone
         holder.contactNameView.text = contactFound.name
+        holder.contactAddressView.text =contactFound.address
+        holder.contactEmailView.text = contactFound.email
+        holder.contactFacebookView.text = contactFound.facebook
+        holder.contactTwitterView.text = contactFound.twitter
 
     }
 

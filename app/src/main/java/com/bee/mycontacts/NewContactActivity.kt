@@ -33,12 +33,20 @@ class NewContactActivity : AppCompatActivity() {
 
     private lateinit var editWordView: EditText
     private lateinit var editPhoneView: EditText
+    private lateinit var editAddrView: EditText
+    private lateinit var editEmailView: EditText
+    private lateinit var editFacebookView: EditText
+    private lateinit var editTwitterView: EditText
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_word)
         editWordView = findViewById(R.id.edit_word)
         editPhoneView = findViewById(R.id.edit_phone)
+        editAddrView = findViewById(R.id.edit_address)
+        editEmailView = findViewById(R.id.edit_email)
+        editFacebookView = findViewById(R.id.edit_facebook)
+        editTwitterView = findViewById(R.id.edit_twitter)
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -46,7 +54,9 @@ class NewContactActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(editWordView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
-                val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString())
+                val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString(),
+                    editAddrView.text.toString(), editEmailView.text.toString(),
+                    editFacebookView.text.toString(), editTwitterView.text.toString())
                // val contact = editWordView.text.toString()
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
