@@ -27,5 +27,6 @@ limitations under the License. -->
             android:layout_height="wrap_content"
             style="@style/word_title"
             android:id="@+id/buttonView"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray"
+            />
 </LinearLayout>

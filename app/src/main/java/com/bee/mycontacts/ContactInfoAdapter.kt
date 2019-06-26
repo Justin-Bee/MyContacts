@@ -55,9 +55,14 @@ class ContactInfoAdapter internal constructor(
 
         init {
             contactPhoneView.setOnClickListener {
-                val Uri = Uri.parse("tel:"+ contactFound.phone)
+                val Uri = Uri.parse("tel:" + contactFound.phone)
                 val callIntent = Intent(Intent.ACTION_DIAL, Uri)
-                startActivity(context,callIntent, null)
+                startActivity(context, callIntent, null)
+            }
+            contactEmailView.setOnClickListener {
+            val phone = Uri.parse("mailto:" + contactFound.email)
+            val emailIntent = Intent(Intent.ACTION_SENDTO, phone)
+            startActivity(context, emailIntent, null)
             }
         }
 
