@@ -24,7 +24,9 @@
             android:layout_below="@+id/phoneView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            android:drawableLeft="@drawable/house32"
+            android:drawablePadding="2dp"/>
     <TextView
             android:id="@+id/emailView"
             style="@style/word_title"
