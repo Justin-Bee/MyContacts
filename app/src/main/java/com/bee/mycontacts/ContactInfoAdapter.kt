@@ -26,6 +26,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.Exception
 
 
 class ContactInfoAdapter internal constructor(
@@ -63,6 +64,17 @@ class ContactInfoAdapter internal constructor(
             val phone = Uri.parse("mailto:" + contactFound.email)
             val emailIntent = Intent(Intent.ACTION_SENDTO, phone)
             startActivity(context, emailIntent, null)
+            }
+            contactTwitterView.setOnClickListener{
+                val twitter = contactFound.twitter
+                try{
+                    startActivity(context,Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name="+twitter)), null)
+                }catch(e: Exception){
+                    startActivity(context,Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/#!/"+twitter)), null)
+                }
+            }
+            contactFacebookView.setOnClickListener{
+                //todo
             }
         }
 
