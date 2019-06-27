@@ -31,7 +31,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:onClick="emailClick"
-            android:drawableLeft="@drawable/email32"/>
+            android:drawableLeft="@drawable/email32"
+            android:drawablePadding="2dp"/>
 
     <TextView
             android:id="@+id/facebookView"
