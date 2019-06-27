@@ -74,7 +74,12 @@ class ContactInfoAdapter internal constructor(
                 }
             }
             contactFacebookView.setOnClickListener{
-                //todo
+                val facebook = contactFound.facebook
+                try{
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/"+ facebook)), null)
+                }catch(e: Exception){
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com/"+ facebook)), null)
+                }
             }
         }
 
