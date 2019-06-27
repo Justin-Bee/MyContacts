@@ -15,7 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
-        android:onClick="phoneClick"/>
+        android:onClick="phoneClick"
+        android:drawableLeft="@drawable/phone32"
+        android:drawablePadding="2dp"/>
     <TextView
             android:id="@+id/addressView"
             style="@style/word_title"
