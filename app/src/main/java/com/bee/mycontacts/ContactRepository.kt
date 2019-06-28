@@ -35,4 +35,8 @@ class ContactRepository(private val contactDao: ContactDao) {
     suspend fun insert(contact: Contact) {
         contactDao.insert(contact)
     }
+
+    suspend fun update(name:String, phone:String, address:String, email:String, facebook:String, twitter:String){
+        contactDao.updateInfo(name,phone, address, email, facebook, twitter)
+    }
 }

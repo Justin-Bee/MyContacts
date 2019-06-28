@@ -15,6 +15,7 @@ package com.bee.mycontacts
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import android.app.Activity
 import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -28,7 +29,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ContactInfoActivity : AppCompatActivity() {
 
-
+    private val newWordActivityRequestCode = 1
     private lateinit var contactViewModel: ContactInfoModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,9 +59,28 @@ class ContactInfoActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
         fab.setOnClickListener {
-         //   val intent = Intent(this, NewContactActivity::class.java)
-          //  startActivityForResult(intent, newWordActivityRequestCode)
-            Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
+            val intent = Intent(this, NewContactActivity::class.java)
+             startActivityForResult(intent, newWordActivityRequestCode)
+            //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
+        super.onActivityResult(requestCode, resultCode, intentData)
+
+        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+            intentData?.let { data ->
+                val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
+                val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5])
+                contactViewModel.update(temp[0], temp[1],temp[2], temp[3], temp[4], temp[5])
+                super.onRestart()
+            }
+        } else {
+            Toast.makeText(
+                applicationContext,
+                R.string.empty_not_saved,
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
