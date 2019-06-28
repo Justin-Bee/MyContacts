@@ -35,7 +35,7 @@ class ContactListAdapter internal constructor(
 
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val contactItemView: Button = itemView.findViewById(R.id.buttonView)
+        val contactItemView: TextView = itemView.findViewById(R.id.buttonView)
         //added for button clicks
         init {
             contactItemView.setOnClickListener { onItemClick?.invoke(contacts[position]) }

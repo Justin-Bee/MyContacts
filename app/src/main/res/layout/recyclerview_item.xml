@@ -23,10 +23,13 @@ limitations under the License. -->
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_light" /> -->
-    <Button android:layout_width="match_parent"
+    <TextView android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/word_title"
             android:id="@+id/buttonView"
+              android:onClick="contactClick"
             android:background="@android:color/darker_gray"
+              android:drawableLeft="@drawable/person32"
+              android:drawablePadding="2dp"
             />
 </LinearLayout>
