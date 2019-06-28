@@ -49,4 +49,10 @@ interface ContactDao {
 
     @Query("UPDATE contact_table set phone=:uphone, address=:uaddress, email=:uemail, facebook=:ufacebook, twitter=:utwitter where name =:uname")
     fun updateInfo(uname: String, uphone: String, uaddress: String, uemail:String, ufacebook:String, utwitter:String)
+
+    //@Update
+   // @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Update
+    suspend fun updateContact(contact: Contact)
+
 }

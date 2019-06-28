@@ -49,5 +49,9 @@ class ContactInfoModel(application: Application) : AndroidViewModel(application)
     fun update(name:String,phone:String, address:String, email:String, facebook:String, twitter:String) = viewModelScope.launch {
         repository.update(name, phone, address, email, facebook, twitter)
     }
+
+    fun updateContact(contact:Contact)= viewModelScope.launch {
+        repository.updateContact(contact)
+    }
 }
 

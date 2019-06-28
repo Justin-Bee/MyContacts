@@ -72,8 +72,8 @@ class ContactInfoActivity : AppCompatActivity() {
             intentData?.let { data ->
                 val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
                 val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5])
-                contactViewModel.update(temp[0], temp[1],temp[2], temp[3], temp[4], temp[5])
-                super.onRestart()
+                contactViewModel.updateContact(contact)
+                //this.onRestart()
             }
         } else {
             Toast.makeText(
@@ -85,7 +85,7 @@ class ContactInfoActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val NAME_REPLY = "com.bee.mycontact.REPLY"
+        const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
     }
 
 
