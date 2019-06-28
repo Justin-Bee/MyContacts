@@ -40,7 +40,9 @@ data class Contact(@PrimaryKey @ColumnInfo var name: String,
                    @ColumnInfo var email: String,
                    @ColumnInfo var facebook: String,
                    @ColumnInfo var twitter: String
-                   ){
+                   )
+//Todo make sure to update the update query in ContactDao when adding or removing columns
+{
     constructor(): this("name","phone", "address", "email", "facebook", "twitter")
 }
 
