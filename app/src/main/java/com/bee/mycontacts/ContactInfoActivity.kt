@@ -15,6 +15,7 @@ package com.bee.mycontacts
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.widget.Toast
@@ -23,6 +24,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ContactInfoActivity : AppCompatActivity() {
 
@@ -53,6 +55,13 @@ class ContactInfoActivity : AppCompatActivity() {
                adapter.setNames(it)
                adapter.setContactInfo(temp) }
         })
+
+        val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
+        fab.setOnClickListener {
+         //   val intent = Intent(this, NewContactActivity::class.java)
+          //  startActivityForResult(intent, newWordActivityRequestCode)
+            Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
+        }
     }
 
     companion object {
