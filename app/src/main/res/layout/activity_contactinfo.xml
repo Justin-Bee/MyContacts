@@ -38,6 +38,14 @@ So, we are leaving the template code in. -->
 
     <include layout="@layout/content_contactinfo"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/pencil"/>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

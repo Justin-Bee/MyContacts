@@ -37,16 +37,12 @@ class ContactInfoAdapter internal constructor(
     private val contactinflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
     private var contactFound = Contact("name", "phone","a", "e", "f", "t")
-  //  var onItemClick: ((Contact) -> Unit )? = null
     private val context: Context = context
 
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        //added for button clicks
-     //   init{
-     //       contactItemView.setOnClickListener {onItemClick?.invoke(contacts[position])  }
-    //    }
+
           val contactNameView: TextView = itemView.findViewById(R.id.nameView)
           val contactPhoneView: TextView = itemView.findViewById(R.id.phoneView)
           val contactAddressView: TextView = itemView.findViewById(R.id.addressView)
@@ -76,7 +72,7 @@ class ContactInfoAdapter internal constructor(
             contactFacebookView.setOnClickListener{
                 val facebook = contactFound.facebook
                 try{
-                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/"+ facebook)), null)
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/"+ facebook)), null)
                 }catch(e: Exception){
                     startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com/"+ facebook)), null)
                 }
