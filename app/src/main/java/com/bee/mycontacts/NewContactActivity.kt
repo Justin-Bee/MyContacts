@@ -19,6 +19,7 @@ package com.bee.mycontacts
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
 
 import android.text.TextUtils
 import android.widget.Button
@@ -37,6 +38,7 @@ class NewContactActivity : AppCompatActivity() {
     private lateinit var editEmailView: EditText
     private lateinit var editFacebookView: EditText
     private lateinit var editTwitterView: EditText
+   // private val contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_REPLY)
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +49,15 @@ class NewContactActivity : AppCompatActivity() {
         editEmailView = findViewById(R.id.edit_email)
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
+
+       // if(contactInfo != null){
+      //      editWordView.setText(contactInfo[0])
+       //     editPhoneView.setText(contactInfo[1])
+       //     editAddrView.setText(contactInfo[2])
+       //     editEmailView.setText(contactInfo[3])
+       //     editFacebookView.setText(contactInfo[4])
+       //     editTwitterView.setText(contactInfo[5])
+      //  }
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {

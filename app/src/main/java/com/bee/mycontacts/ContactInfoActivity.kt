@@ -59,8 +59,13 @@ class ContactInfoActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
         fab.setOnClickListener {
+            //todo pass the info as it already is, so user can edit it
+
             val intent = Intent(this, NewContactActivity::class.java)
+           // val temp = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
+           // intent.putExtra(CONTACT_REPLY, temp)
              startActivityForResult(intent, newWordActivityRequestCode)
+
             //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
         }
     }
@@ -85,7 +90,7 @@ class ContactInfoActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
+        const val CONTACT_REPLY = "com.bee.mycontact.REPLY"
     }
 
 
