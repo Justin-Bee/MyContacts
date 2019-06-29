@@ -33,7 +33,7 @@ class NewContactActivity : AppCompatActivity() {
         editEmailView = findViewById(R.id.edit_email)
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
-
+//todo
       //  val contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_REPLY)
 
        // if(contactInfo != null){
