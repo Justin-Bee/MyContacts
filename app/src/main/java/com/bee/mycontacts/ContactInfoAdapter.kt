@@ -69,6 +69,7 @@ class ContactInfoAdapter internal constructor(
                     startActivity(context,Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/#!/"+twitter)), null)
                 }
             }
+            //TODO fix the facebook code doesnt load the profile page
             contactFacebookView.setOnClickListener{
                 val facebook = contactFound.facebook
                 try{
