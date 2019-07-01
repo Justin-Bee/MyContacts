@@ -6,3 +6,5 @@
 Android Contact utility written in Kotlin
 
 ## License
+
+Copyright 2019 Justin Bee Code released under the [Apache 2.0](https://github.com/Justin-Bee/MyContacts/blob/master/LICENSE) license.
