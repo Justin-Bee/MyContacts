@@ -1,2 +1,2 @@
 # MyContacts
-Android Contact utility
+Android Contact utility written in Kotlin
