@@ -60,7 +60,7 @@ class ContactInfoActivity : AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
         fab.setOnClickListener {
             //todo pass the info as it already is, so user can edit it
-
+            //above we use temp to set contact info maybe use that here
             val intent = Intent(this, NewContactActivity::class.java)
            // val temp = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
            // intent.putExtra(CONTACT_REPLY, temp)
