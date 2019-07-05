@@ -35,7 +35,7 @@ class ContactInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contactinfo)
-        val temp=intent.getStringExtra(MainActivity.NAME_REPLY)
+        val temp=intent.getStringArrayExtra(MainActivity.NAME_REPLY)
         //val toolbar = findViewById<Toolbar>(R.id.contacttoolbar)
        // setSupportActionBar(toolbar)
 
@@ -54,7 +54,7 @@ class ContactInfoActivity : AppCompatActivity() {
             // Update the cached copy of the words in the adapter.
            words?.let {
                adapter.setNames(it)
-               adapter.setContactInfo(temp) }
+               adapter.setContactInfo(temp[0]) }
         })
 
         val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
@@ -62,8 +62,9 @@ class ContactInfoActivity : AppCompatActivity() {
             //todo pass the info as it already is, so user can edit it
             //above we use temp to set contact info maybe use that here
             val intent = Intent(this, NewContactActivity::class.java)
-            val temp = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
-            intent.putExtra(CONTACT_INFO, temp)
+            //var temp2 = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
+
+            intent.putExtra(CONTACT_INFO,temp)
             startActivityForResult(intent, newWordActivityRequestCode)
 
             //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)

@@ -34,9 +34,15 @@ class MainActivity : AppCompatActivity() {
             //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ContactInfoActivity::class.java)
 
-            intent.putExtra(NAME_REPLY, contacts.name )
-            val temp= arrayOf (contacts.name, contacts.phone, contacts.address, contacts.email, contacts.facebook, contacts.twitter)
-            intent.putExtra(CONTACT_REPLY, temp)
+          //  intent.putExtra(NAME_REPLY, contacts.name )
+            var name = contacts.name
+            var phone = contacts.phone
+            var address= contacts.address
+            var email = contacts.email
+            var facebook = contacts.facebook
+            var twitter = contacts.twitter
+            val temp= arrayOf (name, phone, address, email, facebook, twitter)
+            intent.putExtra(NAME_REPLY, temp)
             startActivity(intent)
 
         }
@@ -80,6 +86,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val NAME_REPLY = "com.bee.mycontact.REPLY"
-        const val CONTACT_REPLY = "com.bee.mycontact.CONTACT_REPLY"
+
     }
 }

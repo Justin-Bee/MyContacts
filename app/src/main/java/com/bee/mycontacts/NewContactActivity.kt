@@ -37,12 +37,14 @@ class NewContactActivity : AppCompatActivity() {
         //todo all of this needs fixed
         var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
 
-
-
-    //    if(contactInfo.isNotEmpty()){
-            editWordView.setText(contactInfo[0].toString())
-
-     //   }
+       if(contactInfo[0]!=null){
+            editWordView.setText(contactInfo[0])
+            editPhoneView.setText(contactInfo[1])
+            editAddrView.setText(contactInfo[2])
+            editEmailView.setText(contactInfo[3])
+            editFacebookView.setText(contactInfo[4])
+            editTwitterView.setText(contactInfo[5])
+        }
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -64,6 +66,7 @@ class NewContactActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
         const val CONTACT_REPLY = "com.bee.mycontacts.CONTACT_REPLY"
+        const val CONTACT_INFO = "com.bee.mycontacts.CONTACT_INFO"
     }
 }
 
