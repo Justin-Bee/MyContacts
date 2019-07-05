@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ContactInfoActivity::class.java)
 
             intent.putExtra(NAME_REPLY, contacts.name )
-          //  val temp= arrayOf (contacts.name, contacts.phone, contacts.address, contacts.email, contacts.facebook, contacts.twitter)
-           // intent.putExtra(CONTACT_REPLY, temp)
+            val temp= arrayOf (contacts.name, contacts.phone, contacts.address, contacts.email, contacts.facebook, contacts.twitter)
+            intent.putExtra(CONTACT_REPLY, temp)
             startActivity(intent)
 
         }
@@ -80,6 +80,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val NAME_REPLY = "com.bee.mycontact.REPLY"
-      //  const val CONTACT_REPLY = "com.bee.mycontact.REPLY"
+        const val CONTACT_REPLY = "com.bee.mycontact.CONTACT_REPLY"
     }
 }
