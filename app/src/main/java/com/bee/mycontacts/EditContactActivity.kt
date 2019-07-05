@@ -34,12 +34,8 @@ class EditContactActivity : AppCompatActivity() {
         editEmailView = findViewById(R.id.edit_email)
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
-        //todo all of this needs fixed
-          var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
-
-        //   var tester = intent.getStringArrayExtra(MainActivity.NAME_REPLY)
-
-        //  if(!tester[0].equals("null")){
+        //get the INTENT reply from contactinfoactivity
+        var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
         editWordView.setText(contactInfo[0])
         editPhoneView.setText(contactInfo[1])
         editAddrView.setText(contactInfo[2])
@@ -57,7 +53,6 @@ class EditContactActivity : AppCompatActivity() {
                 val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString(),
                     editAddrView.text.toString(), editEmailView.text.toString(),
                     editFacebookView.text.toString(), editTwitterView.text.toString())
-                // val contact = editWordView.text.toString()
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
@@ -67,6 +62,5 @@ class EditContactActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
-
     }
 }

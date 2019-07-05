@@ -59,15 +59,9 @@ class ContactInfoActivity : AppCompatActivity() {
 
         val fab = findViewById<FloatingActionButton>(R.id.fabUpdate)
         fab.setOnClickListener {
-            //todo pass the info as it already is, so user can edit it
-            //above we use temp to set contact info maybe use that here
             val intent = Intent(this, EditContactActivity::class.java)
-           // var temp2 = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
-
             intent.putExtra(CONTACT_INFO,temp)
             startActivityForResult(intent, editWordActivityRequestCode)
-
-            //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
         }
     }
 
@@ -79,7 +73,6 @@ class ContactInfoActivity : AppCompatActivity() {
                 val temp=(data.getStringArrayExtra(EditContactActivity.EXTRA_REPLY))
                 val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5])
                 contactViewModel.updateContact(contact)
-                //this.onRestart()
             }
         } else {
             Toast.makeText(

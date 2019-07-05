@@ -31,11 +31,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         //added for button clicks
         adapter.onItemClick = { contacts ->
-            //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ContactInfoActivity::class.java)
-
-
-          //  intent.putExtra(NAME_REPLY, contacts.name )
             var name = contacts.name
             var phone = contacts.phone
             var address= contacts.address
@@ -45,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             val temp= arrayOf (name, phone, address, email, facebook, twitter)
             intent.putExtra(NAME_REPLY, temp)
             startActivity(intent)
-
         }
 
         // Get a new or existing ViewModel from the ViewModelProvider.
