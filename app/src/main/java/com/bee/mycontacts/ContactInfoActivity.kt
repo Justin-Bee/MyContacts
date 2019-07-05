@@ -61,7 +61,7 @@ class ContactInfoActivity : AppCompatActivity() {
         fab.setOnClickListener {
             //todo pass the info as it already is, so user can edit it
             //above we use temp to set contact info maybe use that here
-            val intent = Intent(this, NewContactActivity::class.java)
+            val intent = Intent(this, EditContactActivity::class.java)
             //var temp2 = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
 
             intent.putExtra(CONTACT_INFO,temp)

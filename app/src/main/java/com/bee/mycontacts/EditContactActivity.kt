@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
  * Activity for entering a word.
  */
 
-class NewContactActivity : AppCompatActivity() {
+class EditContactActivity : AppCompatActivity() {
 
     private lateinit var editWordView: EditText
     private lateinit var editPhoneView: EditText
@@ -35,18 +35,18 @@ class NewContactActivity : AppCompatActivity() {
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
         //todo all of this needs fixed
-      //  var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
+          var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
 
-     //   var tester = intent.getStringArrayExtra(MainActivity.NAME_REPLY)
+        //   var tester = intent.getStringArrayExtra(MainActivity.NAME_REPLY)
 
-     //  if(!tester[0].equals("null")){
-      //      editWordView.setText(contactInfo[0])
-      //      editPhoneView.setText(contactInfo[1])
-      ///      editAddrView.setText(contactInfo[2])
-      //      editEmailView.setText(contactInfo[3])
-      ///      editFacebookView.setText(contactInfo[4])
-      //      editTwitterView.setText(contactInfo[5])
-     //   }
+        //  if(!tester[0].equals("null")){
+              editWordView.setText(contactInfo[0])
+              editPhoneView.setText(contactInfo[1])
+              editAddrView.setText(contactInfo[2])
+              editEmailView.setText(contactInfo[3])
+              editFacebookView.setText(contactInfo[4])
+              editTwitterView.setText(contactInfo[5])
+
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -57,7 +57,7 @@ class NewContactActivity : AppCompatActivity() {
                 val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString(),
                     editAddrView.text.toString(), editEmailView.text.toString(),
                     editFacebookView.text.toString(), editTwitterView.text.toString())
-               // val contact = editWordView.text.toString()
+                // val contact = editWordView.text.toString()
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
@@ -70,4 +70,3 @@ class NewContactActivity : AppCompatActivity() {
 
     }
 }
-

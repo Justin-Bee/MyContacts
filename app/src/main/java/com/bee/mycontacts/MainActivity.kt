@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             //Toast.makeText(this@MainActivity, "Test" , Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ContactInfoActivity::class.java)
 
+
           //  intent.putExtra(NAME_REPLY, contacts.name )
             var name = contacts.name
             var phone = contacts.phone
