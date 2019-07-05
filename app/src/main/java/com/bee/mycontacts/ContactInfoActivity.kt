@@ -62,9 +62,9 @@ class ContactInfoActivity : AppCompatActivity() {
             //todo pass the info as it already is, so user can edit it
             //above we use temp to set contact info maybe use that here
             val intent = Intent(this, NewContactActivity::class.java)
-           // val temp = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
-           // intent.putExtra(CONTACT_REPLY, temp)
-             startActivityForResult(intent, newWordActivityRequestCode)
+            val temp = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
+            intent.putExtra(CONTACT_INFO, temp)
+            startActivityForResult(intent, newWordActivityRequestCode)
 
             //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
         }
@@ -90,7 +90,8 @@ class ContactInfoActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val CONTACT_REPLY = "com.bee.mycontact.REPLY"
+        const val CONTACT_REPLY = "com.bee.mycontact.CONTACT_REPLY"
+        const val CONTACT_INFO = "com.bee.mycontacts.CONTACT_INFO"
     }
 
 

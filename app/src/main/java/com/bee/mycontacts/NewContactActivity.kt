@@ -9,6 +9,7 @@ import android.text.Editable
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 /**
@@ -33,17 +34,15 @@ class NewContactActivity : AppCompatActivity() {
         editEmailView = findViewById(R.id.edit_email)
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
-//todo
-      //  val contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_REPLY)
+        //todo all of this needs fixed
+        var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
 
-       // if(contactInfo != null){
-      //      editWordView.setText(contactInfo[0])
-       //     editPhoneView.setText(contactInfo[1])
-       //     editAddrView.setText(contactInfo[2])
-       //     editEmailView.setText(contactInfo[3])
-       //     editFacebookView.setText(contactInfo[4])
-       //     editTwitterView.setText(contactInfo[5])
-      //  }
+
+
+    //    if(contactInfo.isNotEmpty()){
+            editWordView.setText(contactInfo[0].toString())
+
+     //   }
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -64,6 +63,7 @@ class NewContactActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_REPLY = "com.bee.mycontact.REPLY"
+        const val CONTACT_REPLY = "com.bee.mycontacts.CONTACT_REPLY"
     }
 }
 
