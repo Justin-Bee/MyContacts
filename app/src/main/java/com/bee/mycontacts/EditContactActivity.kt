@@ -13,7 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * Activity for entering a word.
+ * Activity for editing contact info
  */
 
 class EditContactActivity : AppCompatActivity() {
