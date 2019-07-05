@@ -29,7 +29,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ContactInfoActivity : AppCompatActivity() {
 
-    private val newWordActivityRequestCode = 1
+    private val editWordActivityRequestCode = 1
     private lateinit var contactViewModel: ContactInfoModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,10 +62,10 @@ class ContactInfoActivity : AppCompatActivity() {
             //todo pass the info as it already is, so user can edit it
             //above we use temp to set contact info maybe use that here
             val intent = Intent(this, EditContactActivity::class.java)
-            //var temp2 = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
+           // var temp2 = intent.getStringArrayExtra(MainActivity.CONTACT_REPLY)
 
             intent.putExtra(CONTACT_INFO,temp)
-            startActivityForResult(intent, newWordActivityRequestCode)
+            startActivityForResult(intent, editWordActivityRequestCode)
 
             //Toast.makeText(this, "to be implemented", Toast.LENGTH_LONG)
         }
@@ -74,9 +74,9 @@ class ContactInfoActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
         super.onActivityResult(requestCode, resultCode, intentData)
 
-        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+        if (requestCode == editWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
-                val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
+                val temp=(data.getStringArrayExtra(EditContactActivity.EXTRA_REPLY))
                 val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5])
                 contactViewModel.updateContact(contact)
                 //this.onRestart()
@@ -91,7 +91,6 @@ class ContactInfoActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val CONTACT_REPLY = "com.bee.mycontact.CONTACT_REPLY"
         const val CONTACT_INFO = "com.bee.mycontacts.CONTACT_INFO"
     }
 

@@ -40,12 +40,12 @@ class EditContactActivity : AppCompatActivity() {
         //   var tester = intent.getStringArrayExtra(MainActivity.NAME_REPLY)
 
         //  if(!tester[0].equals("null")){
-              editWordView.setText(contactInfo[0])
-              editPhoneView.setText(contactInfo[1])
-              editAddrView.setText(contactInfo[2])
-              editEmailView.setText(contactInfo[3])
-              editFacebookView.setText(contactInfo[4])
-              editTwitterView.setText(contactInfo[5])
+        editWordView.setText(contactInfo[0])
+        editPhoneView.setText(contactInfo[1])
+        editAddrView.setText(contactInfo[2])
+        editEmailView.setText(contactInfo[3])
+        editFacebookView.setText(contactInfo[4])
+        editTwitterView.setText(contactInfo[5])
 
 
         val button = findViewById<Button>(R.id.button_save)
