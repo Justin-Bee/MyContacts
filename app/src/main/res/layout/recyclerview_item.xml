@@ -28,6 +28,7 @@ limitations under the License. -->
             style="@style/word_title"
             android:id="@+id/buttonView"
               android:onClick="contactClick"
+              android:paddingBottom="2dp"
             android:background="@android:color/darker_gray"
               android:drawableLeft="@drawable/person32"
               android:drawablePadding="2dp"
