@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="buttonLabel">#d3d3d3</color>
+    <!-- need to add more colors for themes -->
 </resources>
