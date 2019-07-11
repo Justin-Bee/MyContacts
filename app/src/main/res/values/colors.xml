@@ -5,4 +5,8 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="buttonLabel">#d3d3d3</color>
     <!-- need to add more colors for themes -->
+    <!-- purple theme color scheme with teal button-->
+    <color name="purpleThemePrimary">#6200EE</color>
+    <color name="purpleThemePrimaryDark">#3700B3</color>
+    <color name="purpleThemeButtonColor">#03DAC%</color>
 </resources>
