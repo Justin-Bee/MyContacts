@@ -20,7 +20,7 @@ class ContactInfoAdapter internal constructor(
     //private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val contactinflater: LayoutInflater = LayoutInflater.from(context)
     private var contacts = emptyList<Contact>() // Cached copy of words
-    private var contactFound = Contact("name", "phone","a", "e", "f", "t")
+    private var contactFound = Contact("name", "phone","a", "e", "f", "t", "i")
     private val context: Context = context
 
 
@@ -33,7 +33,7 @@ class ContactInfoAdapter internal constructor(
           val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
           val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
           val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
-          val contactInstagramView: TextView = itemView.findViewById(R.id.instagramview)
+          val contactInstagramView: TextView = itemView.findViewById(R.id.instagramView)
 
         init {
             contactPhoneView.setOnClickListener {
