@@ -33,7 +33,7 @@ class ContactInfoAdapter internal constructor(
           val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
           val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
           val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
-          val contactInstagramView: TextView = itemView.findViewById(R.id.instgramview)
+          val contactInstagramView: TextView = itemView.findViewById(R.id.instagramview)
 
         init {
             contactPhoneView.setOnClickListener {
@@ -81,7 +81,7 @@ class ContactInfoAdapter internal constructor(
         holder.contactEmailView.text = contactFound.email
         holder.contactFacebookView.text = contactFound.facebook
         holder.contactTwitterView.text = contactFound.twitter
-        holder.contacctInstagramView.text = contactFound.instagram
+        holder.contactInstagramView.text = contactFound.instagram
 
     }
 
