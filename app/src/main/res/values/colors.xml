@@ -8,5 +8,5 @@
     <!-- purple theme color scheme with teal button-->
     <color name="purpleThemePrimary">#6200EE</color>
     <color name="purpleThemePrimaryDark">#3700B3</color>
-    <color name="purpleThemeButtonColor">#03DAC%</color>
+    <color name="purpleThemeButtonColor">#03DAC5</color>
 </resources>
