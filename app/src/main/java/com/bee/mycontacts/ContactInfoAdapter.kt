@@ -1,21 +1,5 @@
 package com.bee.mycontacts
 
-/*
- * Copyright (C) 2017 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -49,6 +33,7 @@ class ContactInfoAdapter internal constructor(
           val contactEmailView: TextView = itemView.findViewById(R.id.emailView)
           val contactFacebookView: TextView = itemView.findViewById(R.id.facebookView)
           val contactTwitterView: TextView = itemView.findViewById(R.id.twitterView)
+          val contactInstagramView: TextView = itemView.findViewById(R.id.instgramview)
 
         init {
             contactPhoneView.setOnClickListener {
@@ -78,6 +63,8 @@ class ContactInfoAdapter internal constructor(
                     startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com/"+ facebook)), null)
                 }
             }
+            
+            //TODO add button click to instagramview
         }
 
     }
@@ -94,6 +81,7 @@ class ContactInfoAdapter internal constructor(
         holder.contactEmailView.text = contactFound.email
         holder.contactFacebookView.text = contactFound.facebook
         holder.contactTwitterView.text = contactFound.twitter
+        holder.contacctInstagramView.text = contactFound.instagram
 
     }
 

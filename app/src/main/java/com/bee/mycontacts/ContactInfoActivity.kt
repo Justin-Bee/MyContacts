@@ -71,7 +71,7 @@ class ContactInfoActivity : AppCompatActivity() {
         if (requestCode == editWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
                 val temp=(data.getStringArrayExtra(EditContactActivity.EXTRA_REPLY))
-                val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5])
+                val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6])
                 contactViewModel.updateContact(contact)
             }
         } else {

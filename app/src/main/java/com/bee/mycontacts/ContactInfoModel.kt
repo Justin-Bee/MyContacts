@@ -31,8 +31,8 @@ class ContactInfoModel(application: Application) : AndroidViewModel(application)
     /**
      * Launching a new coroutine to insert the data in a non-blocking way
      */
-    fun update(name:String,phone:String, address:String, email:String, facebook:String, twitter:String) = viewModelScope.launch {
-        repository.update(name, phone, address, email, facebook, twitter)
+    fun update(name:String,phone:String, address:String, email:String, facebook:String, twitter:String, instagram:String) = viewModelScope.launch {
+        repository.update(name, phone, address, email, facebook, twitter, instagram)
     }
 
     fun updateContact(contact:Contact)= viewModelScope.launch {
