@@ -25,6 +25,8 @@ data class Contact(@PrimaryKey @ColumnInfo var name: String,
                    @ColumnInfo var facebook: String,
                    @ColumnInfo var twitter: String,
                    @ColumnInfo var instagram: String
+//todo add linkedin
+//todo add pictures support
                    )
 //Todo make sure to update the update query in ContactDao when adding or removing columns
 {
