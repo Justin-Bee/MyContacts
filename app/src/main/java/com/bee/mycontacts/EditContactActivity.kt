@@ -25,6 +25,7 @@ class EditContactActivity : AppCompatActivity() {
     private lateinit var editFacebookView: EditText
     private lateinit var editTwitterView: EditText
     private lateinit var editInstagramView: EditText
+    private lateinit var editLinkedinView: EditText
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,7 @@ class EditContactActivity : AppCompatActivity() {
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
         editInstagramView = findViewById(R.id.edit_instagram)
+        editLinkedinView = findViewById(R.id.eidt_linkedin)
         //get the INTENT reply from contactinfoactivity
         var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
         editWordView.setText(contactInfo[0])
@@ -45,6 +47,7 @@ class EditContactActivity : AppCompatActivity() {
         editFacebookView.setText(contactInfo[4])
         editTwitterView.setText(contactInfo[5])
         editInstagramView.setText(contactInfo[6])
+        editLinkedinView.setText(contactInfo[7])
 
 
         val button = findViewById<Button>(R.id.button_save)
@@ -55,7 +58,8 @@ class EditContactActivity : AppCompatActivity() {
             } else {
                 val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString(),
                     editAddrView.text.toString(), editEmailView.text.toString(),
-                    editFacebookView.text.toString(), editTwitterView.text.toString(), editInstagramView.text.toString())
+                    editFacebookView.text.toString(), editTwitterView.text.toString(), editInstagramView.text.toString(),
+                    editLinkedinView.test.toString())
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
