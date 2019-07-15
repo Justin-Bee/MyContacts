@@ -24,13 +24,14 @@ data class Contact(@PrimaryKey @ColumnInfo var name: String,
                    @ColumnInfo var email: String,
                    @ColumnInfo var facebook: String,
                    @ColumnInfo var twitter: String,
-                   @ColumnInfo var instagram: String
+                   @ColumnInfo var instagram: String,
+                   @ColumnInfo var linkedin: String
 //todo add linkedin
 //todo add pictures support
                    )
 //Todo make sure to update the update query in ContactDao when adding or removing columns
 {
-    constructor(): this("name", "phone", "address", "email", "facebook", "twitter", "instagram")
+    constructor(): this("name", "phone", "address", "email", "facebook", "twitter", "instagram", "linkedin")
 }
 
 
