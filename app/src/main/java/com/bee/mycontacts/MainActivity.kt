@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
             var facebook = contacts.facebook
             var twitter = contacts.twitter
             var instagram = contacts.instagram
-            val temp= arrayOf (name, phone, address, email, facebook, twitter, instagram)
+            var linkedin = contacts.linkedin
+            val temp= arrayOf (name, phone, address, email, facebook, twitter, instagram, linkedin)
             intent.putExtra(NAME_REPLY, temp)
             startActivity(intent)
         }
@@ -68,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
                 val temp=(data.getStringArrayExtra(NewContactActivity.EXTRA_REPLY))
-                val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6])
+                val contact = Contact(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7])
                 contactViewModel.insert(contact)
 
             }
