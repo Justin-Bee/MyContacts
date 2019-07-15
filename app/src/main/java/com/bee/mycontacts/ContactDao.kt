@@ -33,8 +33,8 @@ interface ContactDao {
     @Query("DELETE FROM contact_table")
     suspend fun deleteAll()
 
-    @Query("UPDATE contact_table set phone=:uphone, address=:uaddress, email=:uemail, facebook=:ufacebook, twitter=:utwitter, instagram=:uinstagram where name =:uname")
-    fun updateInfo(uname: String, uphone: String, uaddress: String, uemail:String, ufacebook:String, utwitter:String, uinstagram:String)
+    @Query("UPDATE contact_table set phone=:uphone, address=:uaddress, email=:uemail, facebook=:ufacebook, twitter=:utwitter, instagram=:uinstagram, linkedin=:ulinkedin where name =:uname")
+    fun updateInfo(uname: String, uphone: String, uaddress: String, uemail:String, ufacebook:String, utwitter:String, uinstagram:String, ulinkedin:String)
 
     //@Update
    // @Insert(onConflict = OnConflictStrategy.REPLACE)
