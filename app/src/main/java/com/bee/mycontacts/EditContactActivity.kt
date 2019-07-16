@@ -37,7 +37,7 @@ class EditContactActivity : AppCompatActivity() {
         editFacebookView = findViewById(R.id.edit_facebook)
         editTwitterView = findViewById(R.id.edit_twitter)
         editInstagramView = findViewById(R.id.edit_instagram)
-        editLinkedinView = findViewById(R.id.eidt_linkedin)
+        editLinkedinView = findViewById(R.id.edit_linkedin)
         //get the INTENT reply from contactinfoactivity
         var contactInfo = intent.getStringArrayExtra(ContactInfoActivity.CONTACT_INFO)
         editWordView.setText(contactInfo[0])
@@ -59,7 +59,7 @@ class EditContactActivity : AppCompatActivity() {
                 val contact= arrayOf(editWordView.text.toString(), editPhoneView.text.toString(),
                     editAddrView.text.toString(), editEmailView.text.toString(),
                     editFacebookView.text.toString(), editTwitterView.text.toString(), editInstagramView.text.toString(),
-                    editLinkedinView.test.toString())
+                    editLinkedinView.text.toString())
                 replyIntent.putExtra(EXTRA_REPLY, contact)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
