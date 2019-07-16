@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:onClick="instagramClick"
-            android:drawableLeft="@drawable/twitter32"
+            android:drawableLeft="@drawable/instagram32"
             android:drawablePadding="2dp"/>
   <TextView
             android:id="@+id/linkedinView"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:onClick="linkedinClick"
-            android:drawableLeft="@drawable/twitter32"
+            android:drawableLeft="@drawable/linkedin32"
             android:drawablePadding="2dp"/>
 
 
