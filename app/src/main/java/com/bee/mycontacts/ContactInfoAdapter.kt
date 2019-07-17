@@ -59,13 +59,13 @@ class ContactInfoAdapter internal constructor(
             contactFacebookView.setOnClickListener{
                 val facebook = contactFound.facebook
                 try{
-                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/"+ facebook)), null)
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href="+ facebook)), null)
                 }catch(e: Exception){
                     startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com/"+ facebook)), null)
                 }
             }
             
-            //TODO add button click to instagramview
+            //TODO add
             contactInstagramView.setOnClickListener{
                 val insta = contactFound.instagram
                 try{
