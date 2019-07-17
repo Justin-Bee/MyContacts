@@ -68,6 +68,11 @@ class ContactInfoAdapter internal constructor(
             //TODO add button click to instagramview
             contactInstagramView.setOnClickListener{
                 val insta = contactFound.instagram
+                try{
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse( "http://instagram.com/_u/" + insta)), null )
+                }catch(e: Exception){
+                    startActivity(context, Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/"+ insta)), null)
+                }
 
             }
             //TODO add button click for linkedinView
