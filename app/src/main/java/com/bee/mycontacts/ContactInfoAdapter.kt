@@ -66,6 +66,10 @@ class ContactInfoAdapter internal constructor(
             }
             
             //TODO add button click to instagramview
+            contactInstagramView.setOnClickListener{
+                val insta = contactFound.instagram
+
+            }
             //TODO add button click for linkedinView
         }
 
