@@ -17,7 +17,7 @@
         android:background="@android:color/darker_gray"
         android:onClick="phoneClick"
         android:drawableLeft="@drawable/phone32"
-        android:drawablePadding="2dp"/>
+        android:drawablePadding="3dp"/>
     <TextView
             android:id="@+id/addressView"
             style="@style/word_title"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:drawableLeft="@drawable/house32"
-            android:drawablePadding="2dp"/>
+            android:drawablePadding="3dp"/>
     <TextView
             android:id="@+id/emailView"
             style="@style/word_title"
@@ -36,7 +36,7 @@
             android:background="@android:color/darker_gray"
             android:onClick="emailClick"
             android:drawableLeft="@drawable/email32"
-            android:drawablePadding="2dp"/>
+            android:drawablePadding="3dp"/>
 
     <TextView
             android:id="@+id/facebookView"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
             android:onClick="facebookClick"
-            android:drawablePadding="2dp"
+            android:drawablePadding="3dp"
             android:drawableLeft="@drawable/facebook32"/>
     <TextView
             android:id="@+id/twitterView"
@@ -57,7 +57,7 @@
             android:background="@android:color/darker_gray"
             android:onClick="twitterClick"
             android:drawableLeft="@drawable/twitter32"
-            android:drawablePadding="2dp"/>
+            android:drawablePadding="3dp"/>
   <TextView
             android:id="@+id/instagramView"
             style="@style/word_title"
@@ -67,7 +67,7 @@
             android:background="@android:color/darker_gray"
             android:onClick="instagramClick"
             android:drawableLeft="@drawable/instagram32"
-            android:drawablePadding="2dp"/>
+            android:drawablePadding="3dp"/>
   <TextView
             android:id="@+id/linkedinView"
             style="@style/word_title"
@@ -77,7 +77,7 @@
             android:background="@android:color/darker_gray"
             android:onClick="linkedinClick"
             android:drawableLeft="@drawable/linkedin32"
-            android:drawablePadding="2dp"/>
+            android:drawablePadding="3dp"/>
 
 
 
