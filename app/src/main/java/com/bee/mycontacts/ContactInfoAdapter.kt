@@ -76,6 +76,10 @@ class ContactInfoAdapter internal constructor(
 
             }
             //TODO add button click for linkedinView
+            contactLinkedinView.setOnClickListener{
+                val linkedin = contactFound.linkedin
+                
+            }
         }
 
     }
