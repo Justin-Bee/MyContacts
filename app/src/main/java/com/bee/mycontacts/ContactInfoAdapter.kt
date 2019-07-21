@@ -65,7 +65,7 @@ class ContactInfoAdapter internal constructor(
                 }
             }
             
-            //TODO add
+            //TODO make it so it opens app without asking
             contactInstagramView.setOnClickListener{
                 val insta = contactFound.instagram
                 try{
