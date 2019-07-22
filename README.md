@@ -6,7 +6,7 @@
 
 
 ## About
-Android Contact utility written in Kotlin. This contact application will hold information that includes the contacts's Twitter, Facebook, email, and more.
+Android Contact utility written in Kotlin. This contact application will hold information that includes the contacts's Twitter, Facebook, email, Instagram, and LinkedIn.
 From the contact info screen will be able to view profiles on clicking the appropriate information.
 My idea behind this app is that I wanted to make a contacts application that was better than Google's. I want to add many themes to the application so the user can personalize as they wish. 
 ## License
