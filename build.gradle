@@ -33,3 +33,9 @@ ext {
     androidxArchVersion = '2.0.0'
     coroutines = '1.2.0'
 }
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
