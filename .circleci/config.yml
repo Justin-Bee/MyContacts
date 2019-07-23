@@ -11,7 +11,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: ./gradlew lintDebug testDebugUnitTest
+          command: sudo ./gradlew lintDebug testDebugUnitTest
 
       - store_artifacts:
           path: app/build/reports
