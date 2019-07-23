@@ -34,8 +34,3 @@ ext {
     coroutines = '1.2.0'
 }
 
-android {
-    lintOptions {
-        abortOnError false
-    }
-}
