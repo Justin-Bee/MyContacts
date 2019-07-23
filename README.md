@@ -1,7 +1,7 @@
 # MyContacts
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://travis-ci.com/Justin-Bee/MyContacts.svg?branch=master)](https://travis-ci.com/Justin-Bee/MyContacts)
+[![CircleCI](https://circleci.com/gh/Justin-Bee/MyContacts.svg?style=svg)](https://circleci.com/gh/Justin-Bee/MyContacts)
 [![Author](https://img.shields.io/badge/Author-Justin%20Bee-blue.svg)](mailto:jbee.appz@gmail.com)
 
 
