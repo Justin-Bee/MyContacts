@@ -8,10 +8,14 @@ jobs:
 
     steps:
       - checkout
+      
+      - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
 
       - run:
           name: Run tests
-          command: sudo ./gradlew lintDebug testDebugUnitTest
+          command: ./gradlew lintDebug testDebugUnitTest
 
       - store_artifacts:
           path: app/build/reports
