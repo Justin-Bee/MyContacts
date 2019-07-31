@@ -20,7 +20,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "contact_table")
 data class Contact(@PrimaryKey @ColumnInfo var name: String,
                    @ColumnInfo var phone: String,
-                   @ColumnInfo var address: String,
+                   @ColumnInfo var address: String, //change address to include many fields (street, city, state, country)
                    @ColumnInfo var email: String,
                    @ColumnInfo var facebook: String,
                    @ColumnInfo var twitter: String,
