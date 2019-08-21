@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
  * Activity for entering a word.
  */
 
+
 class NewContactActivity : AppCompatActivity() {
 
     private lateinit var editWordView: EditText
